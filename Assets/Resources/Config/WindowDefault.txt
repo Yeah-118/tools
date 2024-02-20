@@ -1,0 +1,4 @@
+Id	WindowName	Perfabs
+1	Welcome	Perfabs/welcome_panel
+2	Video	Perfabs/video_panel
+3	Answer	Perfabs/answer_panel
