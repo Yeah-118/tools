@@ -7,12 +7,12 @@ public class YeahTools
 {
     public static void TestForTools()
     {
-        Debug.Log("²âÊÔ×¨ÓÃ£¡£¡£¡£¡");
+        Debug.Log("æµ‹è¯•ä¸“ç”¨ï¼ï¼ï¼ï¼");
         Debug.Log(Application.dataPath);
         Debug.Log(Path.GetDirectoryName(Application.dataPath));
         string path = Path.GetDirectoryName(Application.dataPath);
-        //EditorUtility.DisplayProgressBar("±êÌâ", "½ø¶ÈÌõÄÚÈİ", 12 / 50);
-        //EditorUtility.DisplayDialog("±êÌâ", "Ñ¯ÎÊ£¿", "È·¶¨", "È¡Ïû");
+        //EditorUtility.DisplayProgressBar("æ ‡é¢˜", "è¿›åº¦æ¡å†…å®¹", 12 / 50);
+        //EditorUtility.DisplayDialog("æ ‡é¢˜", "è¯¢é—®ï¼Ÿ", "ç¡®å®š", "å–æ¶ˆ");
 
         int hour = System.DateTime.Now.Hour;
         int minute = System.DateTime.Now.Minute;
@@ -58,7 +58,7 @@ public class YeahTools
                     }
                 }
                 ToolsAdditional.WriteConfig(worksheet.Name, builder.ToString());
-                Debug.Log(string.Format("±í£º{0}ÒÑ¾­Ğ´ÍêÁË£¡£¡", worksheet.Name));
+                Debug.Log(string.Format("è¡¨ï¼š{0}å·²ç»å†™å®Œäº†ï¼ï¼", worksheet.Name));
             }
             AssetDatabase.Refresh();
         }
@@ -83,11 +83,11 @@ public class YeahTools
                     txt_C.AddPath(Application.dataPath + "/Resources/Config/" + worksheet.Name + ".txt", true);
                     AssetDatabase.CreateAsset(txt_C, string.Format("Assets/Resources/Config/ScriptableObject/{0}.asset", worksheet.Name));
                     AssetDatabase.SaveAssets();
-                    Debug.Log(string.Format("Excel_C£º{0}ÒÑ¾­Ğ´ÍêÁË£¡£¡", worksheet.Name));
+                    Debug.Log(string.Format("Excel_Cï¼š{0}å·²ç»å†™å®Œäº†ï¼ï¼", worksheet.Name));
                 }
                 else
                 {
-                    Debug.Log(string.Format("Excel_C£º{0}ÒÑ¾­´æÔÚ£¬²»ÓÃÉú³É£¡£¡", worksheet.Name));
+                    Debug.Log(string.Format("Excel_Cï¼š{0}å·²ç»å­˜åœ¨ï¼Œä¸ç”¨ç”Ÿæˆï¼ï¼", worksheet.Name));
                 }
             }
             AssetDatabase.Refresh();
@@ -105,13 +105,13 @@ public class YeahTools
         {
             viewsw.WriteLine(ToolsAdditional.GetViewText(filemame));
             viewsw.Close();
-            Debug.Log(string.Format("Ğ´ÍêÁË{0}View", filemame));
+            Debug.Log(string.Format("å†™å®Œäº†{0}View", filemame));
         }
         using (StreamWriter controlsw = new StreamWriter(controlpath))
         {
             controlsw.WriteLine(ToolsAdditional.GetControlText(filemame));
             controlsw.Close();
-            Debug.Log(string.Format("Ğ´ÍêÁË{0}Control", filemame));
+            Debug.Log(string.Format("å†™å®Œäº†{0}Control", filemame));
         }
         AssetDatabase.Refresh();
     }
@@ -129,7 +129,7 @@ public class YeahTools
             string originalmethod = ToolsAdditional.GetMethodString(jiaoben, string.Format("private void {0}()", replacename[i]));
             string latermethod = ToolsAdditional.AddStringToMethod(originalmethod, ToolsAdditional.GetReplaceString(replacename[i]));
             jiaoben = jiaoben.Replace(originalmethod, latermethod);
-            Debug.Log(string.Format("{0}ÒÑ¾­Ğ´ÍêÁË£¡", replacename[i]));
+            Debug.Log(string.Format("{0}å·²ç»å†™å®Œäº†ï¼", replacename[i]));
         }
         using (StreamWriter sw = new StreamWriter(targetpath))
         {
@@ -138,12 +138,11 @@ public class YeahTools
             sw.Close();
         }
         AssetDatabase.Refresh();
-        Debug.Log("Ë¢ĞÂÍê³É£¬¹ÜÀíÆ÷ÒÑ¾­Ğ´ÈëGameInietÖĞ");
+        Debug.Log("åˆ·æ–°å®Œæˆï¼Œç®¡ç†å™¨å·²ç»å†™å…¥GameInietä¸­");
     }
     public static void ProjectInit()
     {
         string[] strings = {
-            Application.streamingAssetsPath,
             Application.dataPath + "/Resources",
             Application.dataPath + "/Resources/Config",
             Application.dataPath + "/Resources/Perfabs",
@@ -156,6 +155,6 @@ public class YeahTools
         }
         ToolsAdditional.ProjectSetting();
         AssetDatabase.Refresh();
-        Debug.Log("ÏîÄ¿³õÊ¼»¯");
+        Debug.Log("é¡¹ç›®åˆå§‹åŒ–");
     }
 }
