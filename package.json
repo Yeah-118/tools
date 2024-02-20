@@ -2,7 +2,7 @@
   "name": "com.yeah.window.unity",
   "displayName": "YeahWindow",
   "description": "有关窗口的相关操作",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2019.2",
   "author": {
     "name": "Yeah",
