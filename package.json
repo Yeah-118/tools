@@ -1,13 +1,12 @@
 {
   "name": "com.yeah.window.unity",
   "displayName": "YeahWindow",
-  "description": "**",
+  "description": "有关窗口的相关操作",
   "version": "1.0.0",
   "unity": "2019.2",
   "author": {
     "name": "Yeah",
-    "email": "1903251148@qq.com",
-    "url": "https://cloud.tencent.com/product/im"
+    "email": "1903251148@qq.com"
   },
   "keywords": [
     "Yeah",
